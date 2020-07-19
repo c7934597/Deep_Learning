@@ -1,0 +1,2 @@
+# AI_CUP_2020_AIMango_Defective_Classification
+AI_CUP_2020_AIMango_Defective_Classification

@@ -1,2 +1,2 @@
-# Deep_Learning_Tutorial
-Deep_Learning_Tutorial
+# Deep_Learning
+Deep_Learning

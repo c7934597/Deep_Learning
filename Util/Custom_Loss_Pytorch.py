@@ -1,7 +1,10 @@
 # pytorch深度學習模組套件
 import torch
-from torch.nn.modules.loss import _WeightedLoss
+import torch.nn as nn
 import torch.nn.functional as F
+
+from torch.nn.modules.loss import _WeightedLoss
+
 
 '''
 https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/173733
@@ -40,6 +43,7 @@ class SmoothCrossEntropyLoss(_WeightedLoss):
 
         return loss
 
+
 '''
 https://www.kaggle.com/c/tgs-salt-identification-challenge/discussion/65938
 '''
@@ -64,6 +68,7 @@ class FocalLoss(nn.Module):
         else:
             return F_loss
 
+
 '''
 https://www.kaggle.com/bigironsphere/loss-function-library-keras-pytorch
 '''
@@ -87,6 +92,7 @@ class DiceLoss(nn.Module):
         dice = (2.*intersection + self.smoothing)/(inputs.sum() + targets.sum() + self.smoothing)  
         
         return 1 - dice
+
 
 '''
 https://www.kaggle.com/bigironsphere/loss-function-library-keras-pytorch
@@ -113,6 +119,7 @@ class DiceBCELoss(nn.Module):
         Dice_BCE = BCE + dice_loss
         
         return Dice_BCE
+
 
 '''
 https://www.kaggle.com/bigironsphere/loss-function-library-keras-pytorch
